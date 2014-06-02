@@ -1,0 +1,54 @@
+<section class="header">
+  <div class="three columns">
+    <h4>Number of Workers</h4>
+  </div>
+  <div class="four columns">
+    <h4>{{column2Title}}</h4>
+  </div>
+  <div class="three columns">
+    <h4>{{column3Title}}</h4>
+  </div>
+  <div class="three columns">
+    <h4>{{column4Title}}</h4>
+  </div>
+  <div class="three columns">
+    <h4>{{column5Title}}</h4>
+  </div>
+</section>
+
+<div class="rounds">
+{{#each round in this}}
+  {{round-row 
+    workers=round.numberOfWorkers 
+    gloves=round.numberOfGlovesProduced 
+    previousWorkers=round.previousRound.numberOfWorkers 
+    previousGloves=round.previousRound.numberOfGlovesProduced
+    marginalCostOfLabor=marginalCostOfLabor
+    valuePerProduct=valuePerProduct
+  }}
+{{/each}}
+</div>
+
+<div class="sixteen columns button-bar">
+  <div class="four columns">
+    <h4>Marginal Cost of Labor</h4>
+    {{input type="number" value=marginalCostOfLabor step=".01" min=0}}
+  </div>
+  <div class="six columns">
+    <h4>Activity</h4>
+    <label>
+      {{view 'radio' name="activitySelection" selectionBinding="activity" value="0"}}
+      Activity 3.1
+    </label>
+    <br>
+    <label>
+      {{view 'radio' name="activitySelection" selectionBinding="activity" value="1"}}
+      Activity 3.2
+    </label>
+  </div>
+  <div class="six columns right">
+    {{#if canRemoveRound}}<button {{action 'removeRound'}} class="secondary">Remove Round</button>{{/if}}
+    <button {{action 'addRound'}}>Add Round</button>
+  </div>
+  
+</div>
