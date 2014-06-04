@@ -18,10 +18,10 @@
 
 <div class="rounds">
 {{#each round in this}}
-  {{round-row 
-    workers=round.numberOfWorkers 
-    gloves=round.numberOfGlovesProduced 
-    previousWorkers=round.previousRound.numberOfWorkers 
+  {{round-row
+    workers=round.numberOfWorkers
+    gloves=round.numberOfGlovesProduced
+    previousWorkers=round.previousRound.numberOfWorkers
     previousGloves=round.previousRound.numberOfGlovesProduced
     marginalCostOfLabor=marginalCostOfLabor
     valuePerProduct=valuePerProduct
@@ -46,9 +46,9 @@
       Activity 3.2
     </label>
   </div>
-  <div class="six columns right">
+  <div class="six columns right buttons">
     {{#if canRemoveRound}}<button {{action 'removeRound'}} class="secondary">Remove Round</button>{{/if}}
     <button {{action 'addRound'}}>Add Round</button>
   </div>
-  
+
 </div>

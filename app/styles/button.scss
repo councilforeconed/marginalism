@@ -21,7 +21,6 @@ button, input[type="submit"], .button {
   @media screen and (max-width: 480px) {
     width: 100%;
     display: block;
-    margin-bottom: 10px;
   }
 }
 
@@ -65,4 +64,8 @@ button.xl, input[type="submit"].xl, .button.xl {
   border-top: 1px dashed $lightBlue;
   padding: 2rem 0;
   margin-top: 1rem;
+}
+
+.buttons {
+  margin-top: 2rem;
 }

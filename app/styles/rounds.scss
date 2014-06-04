@@ -3,35 +3,41 @@
     display: none;
   }
   .round {
-      .workers::before {
-        content: 'Number of Workers';
-        margin-bottom: 0.25em;
-        font-weight: 400;
-        display: block;
-      }
-      .gloves-produced::before {
-        content: 'Gloves Produced';
-        margin-bottom: 0.25em;
-        font-weight: 400;
-        display: block;
-      }
-      .marginal-product::before {
-        content: 'Marginal Product';
-        margin-bottom: 0.25em;
-        font-weight: 400;
-        display: block;
-      }
-      .value-produced::before {
-        content: 'Additional Value Produced';
-        margin-bottom: 0.25em;
-        font-weight: 400;
-        display: block;
-      }
-      .marginal-cost::before {
-        content: 'Marginal Cost of Labor';
-        margin-bottom: 0.25em;
-        font-weight: 400;
-        display: block;
-      }
+    .workers::before {
+      content: 'Number of Workers';
+      margin-bottom: 0.25em;
+      font-weight: 400;
+      display: block;
+    }
+    .gloves-produced::before {
+      content: 'Number Produced';
+      margin-bottom: 0.25em;
+      font-weight: 400;
+      display: block;
+    }
+    .marginal-product::before {
+      content: 'Marginal Product';
+      margin-bottom: 0.25em;
+      font-weight: 400;
+      display: block;
+    }
+    .value-produced::before {
+      content: 'Additional Value Produced';
+      margin-bottom: 0.25em;
+      font-weight: 400;
+      display: block;
+    }
+    .marginal-cost::before {
+      content: 'Marginal Cost of Labor';
+      margin-bottom: 0.25em;
+      font-weight: 400;
+      display: block;
+    }
+    &:nth-child(2n) {
+      background-color: #EEE;
+    }
+    p {
+      margin-left: 1rem;
+    }
   }
 }
